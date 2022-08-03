@@ -9,6 +9,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // Копирование файлов
 const CopyPlugin = require('copy-webpack-plugin');
+// Сжатие JS
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -19,6 +21,10 @@ module.exports = {
         path: pathDest,
         filename: '[name]',
     },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+      },
     module: {
         rules: [
             // JavaScript
@@ -27,6 +33,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
+            // css
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
+              }
         ],
     },
     plugins: [
