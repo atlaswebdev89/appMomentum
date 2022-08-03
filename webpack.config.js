@@ -13,11 +13,13 @@ const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 // 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//  Минификация css
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: {
-        "js/main.bundle.js": pathSrc + '/js/index.js',
+        "js/main.bundle.min.js": pathSrc + '/js/index.js',
     },
     output: {
         path: pathDest,
@@ -25,7 +27,7 @@ module.exports = {
     },
     optimization: {
         minimize: true,
-        minimizer: [new TerserPlugin()],
+        minimizer: [new TerserPlugin(),  new CssMinimizerPlugin()],
       },
     module: {
         rules: [
@@ -49,7 +51,6 @@ module.exports = {
             filename: 'index.html', // название выходного файла
         }),
         new CleanWebpackPlugin(),
-
         new CopyPlugin({
             patterns: [
             { from: pathSrc +"/images", to: "images", },
@@ -57,8 +58,14 @@ module.exports = {
           ]
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/style.css',
-            chunkFilename: '[id].css',
+            filename: 'css/style.min.css',
           }),
     ],
+    devtool: 'inline-source-map',
+    devServer: {
+        compress: true,
+        port: 3030,
+        open: true,
+        hot: true,
+      },
 }
