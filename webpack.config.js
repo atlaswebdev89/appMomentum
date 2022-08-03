@@ -11,6 +11,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 // Сжатие JS
 const TerserPlugin = require("terser-webpack-plugin");
+// 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: "development",
@@ -36,7 +38,7 @@ module.exports = {
             // css
             {
                 test: /\.css$/,
-                use: ['style-loader','css-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
               }
         ],
     },
@@ -54,5 +56,9 @@ module.exports = {
             { from: pathSrc + "/fonts", to: "fonts" },
           ]
         }),
+        new MiniCssExtractPlugin({
+            filename: 'css/style.css',
+            chunkFilename: '[id].css',
+          }),
     ],
 }
