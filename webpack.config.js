@@ -4,14 +4,16 @@ const path = require('path');
 const pathSrc = path.resolve(__dirname, './app/');
 // путь к папке билда
 const pathDest= path.resolve(__dirname, './dist/');
+
+// Создает html c подключенным js 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Очищает выходной каталог при каждом запуске сборщика webPack
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// Копирование файлов
+// Копирование файлов без обработки
 const CopyPlugin = require('copy-webpack-plugin');
 // Сжатие JS
 const TerserPlugin = require("terser-webpack-plugin");
-// 
+// Отдельный файл css
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //  Минификация css
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -66,6 +68,14 @@ module.exports = {
         compress: true,
         port: 3030,
         open: true,
-        hot: true,
+        hot: true, 
+        client: {
+            logging: 'info',
+            progress: true,
+            overlay: {
+                errors: true,
+                warnings: false,
+              },
+          },  
       },
 }
