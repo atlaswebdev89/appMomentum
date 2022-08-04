@@ -57,6 +57,7 @@ module.exports = {
             patterns: [
             { from: pathSrc +"/images", to: "images", },
             { from: pathSrc + "/fonts", to: "fonts" },
+            { from: pathSrc + "/assets", to: "assets" },
           ]
         }),
         new MiniCssExtractPlugin({

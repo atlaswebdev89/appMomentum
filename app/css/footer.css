@@ -1,20 +1,3 @@
-.body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 30vh;
-    min-height: 220px;
-    background-color: aqua;
-}
-
 .footer {
     display: flex;
     flex-direction: row;
@@ -31,9 +14,17 @@
     background-color: blue;
 }
 .quote__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 33%;
     height: 100%;
     background-color: rgb(15, 15, 56);
+}
+.quote__wrapper {
+    height: 30px;
 }
 .todo__container {
     width: 33%;
