@@ -15,28 +15,3 @@
     background-color: aqua;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 30vh;
-    min-height: 220px;
-    background-color: aquamarine;
-}
-.settings__container {
-    width: 33%;
-    height: 100%;
-    background-color: blue;
-}
-.quote__container {
-    width: 33%;
-    height: 100%;
-    background-color: rgb(15, 15, 56);
-}
-.todo__container {
-    width: 33%;
-    height: 100%;
-    background-color: rgb(15, 56, 36); 
-}
