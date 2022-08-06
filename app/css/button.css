@@ -1,0 +1,20 @@
+.change-quote {
+    background-image: url(../images/reload.svg);
+}
+.player-icon, .slider-icon, .change-quote {
+    background-color: transparent;
+    background-size: cover;
+    border: 0;
+    height: 32px;
+    width: 32px;
+}
+
+.reload-animation {
+    animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
