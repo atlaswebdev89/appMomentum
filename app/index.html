@@ -8,27 +8,38 @@
   </head>
   <body class="body" style="background-image: url('images/bg.jpg')">
     <header class="header"></header>
-    <main class="main"></main>
+    <main class="main">
+      <div class="slider-button">
+        <button class="slider-prev slider-button"></button>
+        <button class="slider-next slider-button"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter name]">
+      </div>
+    </main>
     <footer class="footer">
-        <div class="settings__container">
-            <div class="icon__settings"></div>
-            <div class="menu__setting">
-                <nav class="settings"></nav>
-            </div>
+      <div class="settings__container">
+        <div class="icon__settings"></div>
+        <div class="menu__setting">
+          <nav class="settings"></nav>
         </div>
-        <div class="quote__container">
-          <div class="reload">
-              <button class="change-quote reload-image"> </button>
-          </div>
-          <div class="quote__wrapper">
-                <div class="quote"></div>
-                <div class="author"></div>
-          </div>
+      </div>
+      <div class="quote__container">
+        <div class="reload">
+          <button class="change-quote reload-image"></button>
         </div>
-        <div class="todo__container">
-            <div class="todo"></div>
-            <div class="todo__text"></div>
+        <div class="quote__wrapper">
+          <div class="quote"></div>
+          <div class="author"></div>
         </div>
+      </div>
+      <div class="todo__container">
+        <div class="todo"></div>
+        <div class="todo__text"></div>
+      </div>
     </footer>
   </body>
 </html>
