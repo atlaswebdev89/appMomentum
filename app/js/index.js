@@ -5,9 +5,13 @@ const quote = require("./animation-reload");
 // Получаем цитату дня, благодаря экспортируемой функции
 quote.getQuotes();
 // Подключаем файл приветствия 
-const greeting = require('./greeting.js');
+const greeting = require('./greeting');
 // Подключаем файл для даты и времени
-const datetime = require("./datetime.js");
+const datetime = require("./datetime");
+// Подключаем файл для получения погоды 
+const weather = require("./weather");
+// Подключаем файл смены фона
+const background = require('./background');
 
 
 

@@ -1,15 +1,19 @@
 const greeting = document.querySelector(".greeting");
 const nameUser = document.querySelector(".name");
-// Массив строк в зависимости от времени суток
-const timeofday = ["night", "morning", "day", "evening"];
+// Подключаем перевод
+const langs = require("./languages.js");     
+
 
 export const getTimeOfDay = () => {
+  // Массив строк в зависимости от времени суток
+  const timeofday = ["night", "morning", "day", "evening"];
   const date = new Date();
   const hours = date.getHours();
-  const message = timeofday[parseInt(hours / 6)];
-  greeting.textContent = `Good ${message}`;
+  return timeofday[parseInt(hours / 6)];
 };
-getTimeOfDay();
+// Получаем текущее время суток
+const message = getTimeOfDay();
+greeting.textContent = langs.getLang(`Good ${message}`);
 
 // Обновление приветствия при изменение времени суток
 const timer = () => {
