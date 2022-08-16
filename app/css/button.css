@@ -2,7 +2,6 @@
     background-image: url(../images/reload.svg);
 }
 
-.player-icon,
 .slider-icon,
 .change-quote {
     background-color: transparent;
@@ -55,3 +54,4 @@
     right: 20px;
     transform: translateY(-50%);
 }
+

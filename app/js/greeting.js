@@ -3,10 +3,12 @@ const nameUser = document.querySelector(".name");
 // Подключаем перевод
 const langs = require("./languages.js");     
 
+// Добавить placeholder
+nameUser.placeholder=langs.getLang('[Enter name]');
 
 export const getTimeOfDay = () => {
   // Массив строк в зависимости от времени суток
-  const timeofday = ["night", "morning", "day", "evening"];
+  const timeofday = ["night", "morning", "afternoon", "evening"];
   const date = new Date();
   const hours = date.getHours();
   return timeofday[parseInt(hours / 6)];

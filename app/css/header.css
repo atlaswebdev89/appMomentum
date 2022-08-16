@@ -49,3 +49,68 @@
 .weather-icon {
     font-size: 44px;
 }
+
+.player-icon {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    margin-bottom: 28px;
+}
+
+.play {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url(../images/play.svg);
+}
+.play-next {
+    background-image: url(../images/play-next.svg);
+}
+.play-prev {
+    background-image: url(../images/play-prev.svg);
+}
+.play-pause {
+    background-image: url(../images/pause.svg);
+}
+.player-icon:hover, .slider-icon:hover, .change-quote:hover {
+    opacity: 1;
+}
+.play-item:hover {
+    opacity: 1;
+}
+.play-item {
+    position: relative;
+    padding: 5px 5px 5px 20px;
+    list-style: none;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.play-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    font-weight: 900;
+}
+.play-list {
+    text-align: left;
+}
+.item-active::before {
+    color: rgb(197, 179, 88);
+}

@@ -12,6 +12,10 @@ const datetime = require("./datetime");
 const weather = require("./weather");
 // Подключаем файл смены фона
 const background = require('./background');
+// Подключаем аудио плеер
+const audio = require('./player');
+// Подключаем файл для перевода
+const langChanger = require('./langChanger');
 
 
 

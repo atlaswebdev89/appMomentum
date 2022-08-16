@@ -8,8 +8,33 @@
     min-height: 220px;
 }
 .settings__container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
     max-width: 33%;
     height: 100%;
+}
+.lang {
+    padding: 20px;
+    white-space: nowrap;
+}
+.lang-button {
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 6px;
+}
+.lang-active {
+    background-color: blueviolet;
+}
+.lang-button:hover {
+    background-color: blueviolet;
 }
 .reload {
     margin-bottom: 20px;
@@ -22,6 +47,11 @@
     align-items: center;
     height: 100%;
     padding: 20px 20px;
+}
+.change-quote {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
 }
 .quote {
     margin-bottom: 20px;

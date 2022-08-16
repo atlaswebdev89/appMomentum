@@ -25,13 +25,9 @@ async function getQuotes() {
     const data = await res.json();
     // Получаем рандомное число для получения случайной цитаты
     const RandomItem = Math.round(Math.random() * (data.length-1));
-    if (localStorage.getItem("language") === "en") {
-      quote.textContent = data[RandomItem].en.quoteText;
-      author.textContent = data[RandomItem].en.quoteAuthor;
-    } else {
-      quote.textContent = data[RandomItem].ru.quoteText;
-      author.textContent = data[RandomItem].ru.quoteAuthor;
-    }
+    const locale = (localStorage.getItem("language")) ? localStorage.getItem("language") : 'en';
+      quote.textContent = data[RandomItem][locale].quoteText;
+      author.textContent = data[RandomItem][locale].quoteAuthor;
     // Иначе выводим ошибку
   } else {
     quote.textContent = "Error! Not found data";

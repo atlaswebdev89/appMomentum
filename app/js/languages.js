@@ -6,8 +6,9 @@ const lang = {
         "Humidity": "Влажность",
         "Good night": "Доброй ночи", 
         "Good morning": "Доброе утро", 
-        "Good day": "Добрый день", 
+        "Good afternoon": "Добрый день", 
         "Good evening":"Добрый вечер",
+        "[Enter name]": "Введите имя",
     }
 }
 
