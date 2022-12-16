@@ -26,5 +26,8 @@
     "build": "webpack",
     "serve": "webpack serve",
     "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
   }
 }
